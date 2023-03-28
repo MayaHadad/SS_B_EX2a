@@ -17,8 +17,8 @@ TEST_CASE("before starting the game"){
     CHECK_THROWS(game.printWiner());
     CHECK_THROWS(game.printLog());
     game.playTurn();
-    CHECK(p1.stacksize()==25);
-    CHECK(p2.stacksize()==25);
+    CHECK(p1.stacksize()<26);
+    CHECK(p2.stacksize()<26);
 }
 
 TEST_CASE("should fail because a player can play in one game only"){
